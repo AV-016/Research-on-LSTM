@@ -7,7 +7,7 @@ This project implements a Long Short-Term Memory (LSTM) model for stock price pr
 Project Overview
 The project uses the Yahoo Finance dataset for stock prices of multiple companies. It evaluates the performance of the LSTM model by testing different epoch sizes and optimizing the training process. The evaluation metrics used are RMSE (Root Mean Squared Error) and MAPE (Mean Absolute Percentage Error).
 
-The project aims to:
+# The project aims to:
 
 Predict stock prices using LSTM.
 
@@ -15,7 +15,7 @@ Compare model performance across different epoch sizes (20, 40, 60, 80, and fine
 
 Visualize the results and evaluate the best performing configurations.
 
-Features
+# Features
 Stock price prediction using LSTM.
 
 Model performance comparison for multiple epoch sizes.
@@ -27,7 +27,8 @@ Visualization of predicted vs. true stock prices.
 Option to fine-tune epoch sizes for better performance.
 
 
-Dependencies
+# Dependencies
+
 yfinance: For downloading stock price data from Yahoo Finance.
 
 numpy: For numerical operations.
@@ -42,7 +43,7 @@ tensorflow: For training and evaluating the LSTM model.
 
 
 
-Usage
+# Usage
 Download Stock Data: The script automatically downloads stock data using the yfinance library for a given list of tickers.
 
 Training and Prediction: The LSTM model is trained on the historical stock price data with different epoch sizes. It predicts future stock prices (1-day or 7-day ahead).
