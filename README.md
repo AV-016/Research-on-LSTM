@@ -9,9 +9,7 @@ This repository contains a machine learning project focused on predicting stock 
 4. [Data](#data)
 5. [Model](#model)
 6. [Evaluation](#evaluation)
-7. [Usage](#usage)
-8. [Contributing](#contributing)
-9. [License](#license)
+
 
 ## Overview
 
@@ -22,18 +20,18 @@ The objective of this project is to predict future stock prices using an LSTM-ba
 - **Amazon (AMZN)**
 
 The project includes:
-- **Data preprocessing**: Feature engineering and scaling of stock data.
-- **LSTM Model**: Time series forecasting using LSTM networks.
-- **Hyperparameter tuning**: Tuning LSTM hyperparameters like epochs and units.
-- **Evaluation**: Using RMSE and MAPE metrics for evaluating model performance.
+**Data preprocessing**: Feature engineering and scaling of stock data.
+**LSTM Model**: Time series forecasting using LSTM networks.
+**Hyperparameter tuning**: Tuning LSTM hyperparameters like epochs and units.
+**Evaluation**: Using RMSE and MAPE metrics for evaluating model performance.
 
 ## Features
 
-- **Stock Data Analysis**: Data collection and cleaning for AAPL, MSFT, GOOGL, and AMZN stock prices.
-- **Model Training**: LSTM network implementation for time series forecasting.
-- **Hyperparameter Tuning**: A grid search-based approach for hyperparameter optimization.
-- **Prediction Horizons**: Predictions made for 1-day ahead, 3-days ahead, and 7-days ahead.
-- **Evaluation Metrics**: RMSE (Root Mean Squared Error) and MAPE (Mean Absolute Percentage Error) used for evaluating model accuracy.
+**Stock Data Analysis**: Data collection and cleaning for AAPL, MSFT, GOOGL, and AMZN stock prices.
+**Model Training**: LSTM network implementation for time series forecasting.
+**Hyperparameter Tuning**: A grid search-based approach for hyperparameter optimization.
+**Prediction Horizons**: Predictions made for 1-day ahead, 3-days ahead, and 7-days ahead.
+**Evaluation Metrics**: RMSE (Root Mean Squared Error) and MAPE (Mean Absolute Percentage Error) used for evaluating model accuracy.
 
 ## Requirements
 
