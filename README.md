@@ -1,53 +1,82 @@
-# Research-on-LSTM
+# Stock Price Prediction Using LSTM
 
+This repository contains a machine learning project focused on predicting stock prices using Long Short-Term Memory (LSTM) networks. The research explores the performance of LSTM models on stock data for various companies and compares the effectiveness of hyperparameter tuning. The project also evaluates the model's performance using metrics such as RMSE and MAPE over different prediction horizons (1-day, 7-day predictions).
 
-Stock Price Prediction with LSTM
-This project implements a Long Short-Term Memory (LSTM) model for stock price prediction. The model uses historical stock data (Open, Close, High, Low, and Volume) to predict future stock prices. The main focus of this project is to analyze and optimize the performance of the model by varying the number of epochs used for training.
+## Table of Contents
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Requirements](#requirements)
+4. [Data](#data)
+5. [Model](#model)
+6. [Evaluation](#evaluation)
+7. [Usage](#usage)
+8. [Contributing](#contributing)
+9. [License](#license)
 
-Project Overview
-The project uses the Yahoo Finance dataset for stock prices of multiple companies. It evaluates the performance of the LSTM model by testing different epoch sizes and optimizing the training process. The evaluation metrics used are RMSE (Root Mean Squared Error) and MAPE (Mean Absolute Percentage Error).
+## Overview
 
-# The project aims to:
+The objective of this project is to predict future stock prices using an LSTM-based model. The model is trained on historical stock data, with a focus on predicting prices for the following companies:
+- **Apple (AAPL)**
+- **Microsoft (MSFT)**
+- **Google (GOOGL)**
+- **Amazon (AMZN)**
 
-Predict stock prices using LSTM.
+The project includes:
+- **Data preprocessing**: Feature engineering and scaling of stock data.
+- **LSTM Model**: Time series forecasting using LSTM networks.
+- **Hyperparameter tuning**: Tuning LSTM hyperparameters like epochs and units.
+- **Evaluation**: Using RMSE and MAPE metrics for evaluating model performance.
 
-Compare model performance across different epoch sizes (20, 40, 60, 80, and fine-tuned epochs).
+## Features
 
-Visualize the results and evaluate the best performing configurations.
+- **Stock Data Analysis**: Data collection and cleaning for AAPL, MSFT, GOOGL, and AMZN stock prices.
+- **Model Training**: LSTM network implementation for time series forecasting.
+- **Hyperparameter Tuning**: A grid search-based approach for hyperparameter optimization.
+- **Prediction Horizons**: Predictions made for 1-day ahead, 3-days ahead, and 7-days ahead.
+- **Evaluation Metrics**: RMSE (Root Mean Squared Error) and MAPE (Mean Absolute Percentage Error) used for evaluating model accuracy.
 
-# Features
-Stock price prediction using LSTM.
+## Requirements
 
-Model performance comparison for multiple epoch sizes.
+Before running this project, ensure you have the following Python packages installed:
 
-RMSE and MAPE evaluation metrics.
+TensorFlow: For building and training the LSTM model.
 
-Visualization of predicted vs. true stock prices.
-
-Option to fine-tune epoch sizes for better performance.
-
-
-# Dependencies
-
-yfinance: For downloading stock price data from Yahoo Finance.
-
-numpy: For numerical operations.
+Keras: A high-level neural network API running on top of TensorFlow.
 
 pandas: For data manipulation and analysis.
 
-matplotlib: For data visualization.
+numpy: For numerical operations.
 
-scikit-learn: For data scaling and evaluation metrics.
+matplotlib: For plotting graphs and visualizations.
 
-tensorflow: For training and evaluating the LSTM model.
+scikit-learn: For model evaluation metrics and preprocessing.
+
+
+Stock price data for AAPL, MSFT, GOOGL, and AMZN is fetched using the Yahoo Finance API. 
+The data contains:
+Open, High, Low, Close, and Volume information for each stock.
+Data is preprocessed and scaled for use in the LSTM model.
 
 
 
-# Usage
-Download Stock Data: The script automatically downloads stock data using the yfinance library for a given list of tickers.
+# Hyperparameters:
+LSTM Units: Number of units in the LSTM layer.
 
-Training and Prediction: The LSTM model is trained on the historical stock price data with different epoch sizes. It predicts future stock prices (1-day or 7-day ahead).
+Dense Units: Number of units in the dense layer.
 
-Visualization: The script generates plots comparing the true and predicted stock prices for each day.
+Epochs: Number of training epochs.
 
-Results: The RMSE and MAPE values are printed for each ticker and epoch configuration, and the results are displayed in a table.
+Batch Size: Number of samples per gradient update.
+
+The model is trained for different values of these hyperparameters to evaluate their performance.
+
+
+## Evaluation
+After training, the model's performance is evaluated using two metrics:
+
+RMSE (Root Mean Squared Error): Measures the average magnitude of the errors.
+
+MAPE (Mean Absolute Percentage Error): Measures the accuracy as a percentage.
+
+Performance is evaluated for 1-day, 3-day, and 7-day predictions.
+
